@@ -59,9 +59,59 @@
     
       
        
-        //banking app
+            //banking app
+            document.write("<br/>");
+            document.write("<br/>");
+
+            function Banking(){
+
+            var current_amount=0;
+
+            this.checkAccount=function(amount){
+
+            if(current_amount==0){
+            return "Open new account";
+
+            }
+            else{
+            return "Continue Banking";
+
+
+            }
+
+            }
+
+            this.deposit=function(amount){
+            current_amount=current_amount+amount;
+            return "Amount Deposited Successfully..Your Account Balance is"+current_amount;
+            }
+            this. withdraw=function(amount){
+
+                    if(amount>current_amount){
+                
+                    return "Insufficient Balance";
+                    
+                        
+                    }
+
+                    else{
+
+                    current_amount-=amount;
+                    return "Your current amount is "+current_amount;
+            }
+            }
+            }
+            var b=new Banking();
+            b.checkAccount(1000);
+
+
+            'Open new account'
+            b.deposit(2000);
+            'Amount Deposited Successfully..Your Account Balance is2000'
+            b.withdraw(500);
+            'Your current amount is 1500'
         //array of task list
-        document.write("<br/>");
+        
         document.write("<br/>");
         document.write("<br/>");
         document.write(" removing the given index value from an array ");
