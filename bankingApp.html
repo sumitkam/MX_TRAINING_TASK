@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanKing App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body{
+           
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #272823   ;
+            margin: 0;
+            padding: 50px;
+           
+            text-align: center;
+        }
+        .inqury{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Banking App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="inqury">
+        <div class="card w-75">
+            <div class="card-body">
+          
+                <div>
+                    <h5 class="card-title p-3"><u><b>Wellcome to Banking Enqury</b></u></h5>
+                    <h6 class="card-subtitle mb-4 text-muted p-4" id="">Your Account Balance is <span id="accBalance">0 Rs.</span></h6>
+                   <div class="row">
+                       <div class="col-sm-4">
+                        <input type="number" placeholder="enter the amount" id="amoAcc"  class="form-control mb-3">
+                        <button class="btn btn-primary p-1 mr-5" onclick="createAcc()">Create account</button>
+                       </div>
+                       <div class="col-sm-4">
+                        <input type="number" placeholder="enter amount to withdraw " id="withdrawAmmount" class="form-control mb-3">
+                        <button class="btn btn-warning p-1 " onclick="withdraw()">Withdraw</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" placeholder="enter amount less than the balance" id="depositeAmmount" class="form-control mb-3">
+                            <button class="btn btn-success p-1 ml-5" onclick="deposite()">Deposite</button>
+                        </div>
+                   </div>  
+                </div>
+            
+            </div>
+            <div class="card footer">
+                <p class="card-subtitle mb-1 text-muted">If don't have account click on create account minimum 5000/- to create account</p>
+            </div>
+          </div>
+    </div>
+    <script>
+        //var inputVal = /^[0-9]{1,8}+$/;
+        function createAcc(){
+            let createAmo = document.getElementById("amoAcc").value;
+            
+            if(createAmo == ''){
+                alert("Your amount is empty else enter correct input");
+            }
+            else if(createAmo<5000){
+                alert('Amount should be greater than 5000');
+            }
+            else{
+               document.getElementById('accBalance').innerText=createAmo;
+               document.getElementById("amoAcc").value="";
+               //alert('your account has created   ');
+            }
+        }
+
+        function withdraw(){
+            let totalAccBalance=document.getElementById('accBalance').innerText;
+            let getWithdrawAmt=document.getElementById('withdrawAmmount').value;
+            let balanceAmt = totalAccBalance-getWithdrawAmt;
+            if(getWithdrawAmt == ''){
+                alert("Your amount is empty ");
+            }
+            else if(getWithdrawAmt > totalAccBalance){
+                alert('Your amount is empty else enter correct input');
+            }
+            else{
+                document.getElementById('accBalance').innerText=balanceAmt;
+                document.getElementById("withdrawAmmount").value="";
+                //alert("you have withdraw your amount");
+            }
+           
+           
+           
+        }
+        function deposite(){
+             let totalAccBalance = document.getElementById("accBalance").innerText;
+             let deptAmo = document.getElementById("depositeAmmount").value;
+             let balanceAmt = parseInt(totalAccBalance) + parseInt(deptAmo);
+               if(deptAmo == ''){
+                alert("Your amount is empty else enter correct input ");
+            } else{
+                document.getElementById('accBalance').innerText=balanceAmt;
+                document.getElementById("depositeAmmount").value="";
+                //alert("you have withdraw your amount");
+            }
+      
+            
+           // alert(totalAccBalance);
+            
+        }
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
