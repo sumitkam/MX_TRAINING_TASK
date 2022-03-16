@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Third</title>
+</head>
+<body>
+    <!-- <form action="">
+        <label for="">Name</label>
+        <input type="text" name="name" id="name" placeholder="enter your name"><br><br>
+
+        <label for="">Email</label>
+        <input type="email" name="email" id="email" placeholder="enter email address"><br><br>
+        <label for="">Password</label>
+        <input type="text" name="pass" id="pass" placeholder="enter your password"><br><br>
+        <label for="">Conform Password</label>
+        <input type="text" name="cpass" id="cpass" placeholder="enter confrom password"><br><br>
+        <label for="">Mobile no.</label>
+        <input type="text" name="num" id="num" placeholder="enter your moblie no."><br><br>
+        <button onclick="validate()">Validation</button>
+    </form> -->
+    <script>
+        //email validation
+        // function validarte(){
+        //     var name = document.getElementById("name").value;
+        //     var email = document.getElementById("email").value;
+        //     var pass = document.getElementById("pass").value;
+        //     var cpass = document.getElementById("cpass").value;
+        //     var num = document.getElementById("num").value;
+
+        //     var nameParttern = /^[a-zA-Z\-]+$/;
+        //     var emailPattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]){2,4}+$/;
+        //     var passParttern = /^[A-Za-z]\w{7,14}$/;
+        //     var cpassParttern = /^[A-Za-z]\w{7,14}$/;
+        //     var numParttern = /^[0-9]{10}$/;
+
+        //     if(name == '' ){
+        //         alert("Email cannot be empty");
+        //     }else if(!namePattern.text(name)){
+        //         alert("Please Provide a Valid name")
+        //     }else{
+        //         alert("Form has been sent successfully")
+        //     }
+        //     if(email == '' ){
+        //         alert("Email cannot be empty");
+        //     }else if(!eamilPattern.text(email)){
+        //         alert("Please Provide a Valid email")
+        //     }else{
+        //         alert("Form has been sent successfully")
+        //     }
+        //     if(pass == '' ){
+        //         alert("Email cannot be empty");
+        //     }else if(!passPattern.text(pass)){
+        //         alert("Please Provide a Valid pass")
+        //     }else{
+        //         alert("Form has been sent successfully")
+        //     }
+        //     if(cpass == '' ){
+        //         alert("Email cannot be empty");
+        //     }else if(!cpassPattern.text(cpass) && pass != cpass){
+        //         alert("Please Provide a same cpass ")
+        //     }else{
+        //         alert("Form has been sent successfully")
+        //     }
+
+        //     if(num == '' ){
+        //         alert("Email cannot be empty");
+        //     }else if(!numPattern.text(num)){
+        //         alert("Please Provide a Valid num")
+        //     }else{
+        //         alert("Form has been sent successfully")
+        //     }
+        // }
+
+
+
+        // //date 
+        // var d = new Date();
+        // document.write("date",d)
+        // document.write("<br / >");
+        // var h = d.getHours();
+        // document.write("hours",h);
+        // document.write("<br / >");
+        // var m = d.getMinutes();
+        // document.write("miniute",m);
+        // document.write("<br / >");
+        // document.write(d.toDateString());
+        // document.write("<br / >");
+        // document.write("<br / >");
+       
+        // // counting days between two dates
+
+        // let today = new Date().toISOString().slice(0, 10)
+
+        // const startDate  = '2021-03-15';
+        // const endDate    = '2021-04-24';
+        // const diffInMs   = new Date(endDate) - new Date(startDate)
+        // const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+        // document.write( diffInDays  );
+        // document.write("<br / >");
+        // document.write("<br / >");
+
+        // // count the repeated word
+
+        // function countOccurences(string, word) {
+        //     return string.split(word).length - 1;
+        //     }
+        //     var text="We went down to the stall, then down to the river."; 
+        //     var count=countOccurences(text,"down"); // 2
+        //     document.write(count);
+        //     document.write("<br / >");
+        //     document.write("<br / >");
+
+        // //length of pincode 
+        // var validUsername = /^[a-zA-Z0-9]*$/;
+        // var validCity = /^[a-zA-Z]+$/;
+        // var validMobile = /^[0-9]{10}$/;
+        // var pinValid = /^[0-9]{1,6}$/;
+        // let pin = "123456";
+        // let username = "Sumit123";
+        // let city = "Chandrapur";
+        // let mobile = "9923531401";
+       
+        // if(validUsername.test(username)){
+        //     document.write("valid username");
+        // }else{
+        //     document.write("invalid username");
+        // }
+        // document.write("<br / >");
+            
+        // if(validCity.test(city)){
+        //     document.write("valid city");
+        // }else{
+        //     document.write("invalid city");
+        // }
+        // document.write("<br / >");
+
+        // if(validMobile.test(mobile)){
+        //     document.write("valid mobile");
+        // }else{
+        //     document.write("invalid mobile");
+        // }
+        // document.write("<br / >");
+
+        // if(pinValid.test(pin)){
+        //     document.write("valid pin");
+        // }else{
+        //     document.write("invalid pin");
+        // }
+
+        // add the given elelmet in array
+
+var myArr = [];
+function Items(){
+    myArr.push.apply(myArr, arguments);
+}
+
+Items("item1","item2","item3");
+console.log(myArr);
+
+
+
+    </script>
+</body>
+</html>
