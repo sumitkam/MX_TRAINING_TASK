@@ -35,28 +35,24 @@
     </nav>
 
     <div class="inqury">
-        <div class="card w-75">
+        <div class="card w-50">
             <div class="card-body">
-          
                 <div>
                     <h5 class="card-title p-3"><u><b>Welcome to Banking Enquiry</b></u></h5>
                     <h6 class="card-subtitle mb-4 text-muted p-4" id="">Your Account Balance is <span id="accBalance">0 Rs.</span></h6>
+                    <input type="number" placeholder="enter the amount" id="input"  class="form-control mb-3">
                    <div class="row">
                        <div class="col-sm-4">
-                        <input type="number" placeholder="enter the amount" id="amoAcc"  class="form-control mb-3">
                         <button class="btn btn-primary p-1 mr-5" onclick="createAcc()">Create account</button>
                        </div>
                        <div class="col-sm-4">
-                        <input type="number" placeholder="enter amount to withdraw " id="withdrawAmmount" class="form-control mb-3">
                         <button class="btn btn-warning p-1 " onclick="withdraw()">Withdraw</button>
                         </div>
-                        <div class="col-sm-4">
-                            <input type="number" placeholder="enter amount less than the balance" id="depositeAmmount" class="form-control mb-3">
+                        <div class="col-sm-4">   
                             <button class="btn btn-success p-1 ml-5" onclick="deposite()">Deposite</button>
                         </div>
                    </div>  
                 </div>
-            
             </div>
             <div class="card footer">
                 <p class="card-subtitle mb-1 text-muted">If don't have account click on create account minimum 5000/- to create account</p>
@@ -64,9 +60,8 @@
           </div>
     </div>
     <script>
-        //var inputVal = /^[0-9]{1,8}+$/;
         function createAcc(){
-            let createAmo = document.getElementById("amoAcc").value;
+            let createAmo = document.getElementById("input").value;
             
             if(createAmo == ''){
                 alert("Your amount is empty else enter correct input");
@@ -76,14 +71,14 @@
             }
             else{
                document.getElementById('accBalance').innerText=createAmo;
-               document.getElementById("amoAcc").value="";
+               document.getElementById("input").value="";
                //alert('your account has created   ');
             }
         }
 
         function withdraw(){
             let totalAccBalance=document.getElementById('accBalance').innerText;
-            let getWithdrawAmt=document.getElementById('withdrawAmmount').value;
+            let getWithdrawAmt=document.getElementById('input').value;
             let balanceAmt = totalAccBalance-getWithdrawAmt;
             if(getWithdrawAmt == ''){
                 alert("Your amount is empty ");
@@ -93,28 +88,22 @@
             }
             else{
                 document.getElementById('accBalance').innerText=balanceAmt;
-                document.getElementById("withdrawAmmount").value="";
+                document.getElementById("input").value="";
                 //alert("you have withdraw your amount");
             }
-           
-           
-           
         }
+
         function deposite(){
              let totalAccBalance = document.getElementById("accBalance").innerText;
-             let deptAmo = document.getElementById("depositeAmmount").value;
+             let deptAmo = document.getElementById("input").value;
              let balanceAmt = parseInt(totalAccBalance) + parseInt(deptAmo);
                if(deptAmo == ''){
                 alert("Your amount is empty else enter correct input ");
             } else{
                 document.getElementById('accBalance').innerText=balanceAmt;
-                document.getElementById("depositeAmmount").value="";
+                document.getElementById("input").value="";
                 //alert("you have withdraw your amount");
             }
-      
-            
-           // alert(totalAccBalance);
-            
         }
 
 

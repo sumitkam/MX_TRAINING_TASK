@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combine app</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style> 
+    body{
+      background-color: darkslategray;
+    }
+    header{
+      
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="#">Combine App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav nav-pills ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#regForm">FORM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#cityData">CITY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#bankApp">BANKING</a>
+        </li>
+      </ul>
+  </nav>
+  </header>
+
+  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <section class="regForm w-100 d-flex justify-content-center" id="regForm">
+      <div class="card mt-5">
+        <div class="card-body">
+          <form >
+            <h2 class="d-flex justify-content-center"><b><u>Registration form</u></b></h2>
+              <div class="form-row mt-5 text-align-left">
+                <div class="form-group col-md-6">
+                  <label for="inputname">Full Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter Full Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputusername">Username</label>
+                  <input type="text" class="form-control" id="userName" placeholder="Enter Username" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email Address" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Password</label>
+                  <input type="password" class="form-control" id="pass" placeholder="Enter Password" required>
+                </div>
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="inputAddress">Address</label>
+                 <textarea name="address" id="address" cols="10" rows="10" class="form-control" required></textarea>
+                </div>
+                <!-- 
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div> -->
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <select id="inputCity" class="form-control">
+                    <option selected>Choose...</option>
+                    <option></option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Phone Number </label>
+                  <input type="number" class="form-control" id="pinCode" required >
+                </div>
+              </div>
+              <div class="form-group d-flex justify-content-center mt-3">
+                <button type="submit" onclick="validate()" class="btn btn-primary ">Submit</button>
+              </div>
+              
+            </form>
+        </div>
+      </div>
+        
+    </section>
+    <hr>
+    <section class="cityData  p-4" id="cityData">
+      <div class="heading d-flex justify-content-center">
+        <h2 class="text-light"><b><u>City Details</u></b></h2>
+      </div>
+      <div class="row mt-3 p-3">
+        <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h3>Chandrapur</h3>
+              </div>
+              <img class="card-img-top" src="Chandrapur.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p>
+                  Chandrapur (earlier known as Chanda, the official name until 1964) is a city and a municipal corporation in Chandrapur district, Maharashtra state, India. It is the district headquarters of Chandrapur district. Chandrapur is a fort city founded by Khandkya Ballal Sah, a Gond king of the 13th century.[1] The city sits at the confluence of the Erai river and Zarpat river. The area around the city is rich in coal seams.
+                  [citation needed]. Hence, Chandrapur is also known as the "black gold city".[2] 
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Nagpur</h3>
+            </div>
+            <img class="card-img-top" src="Deekshabhoomi.jpg" alt="Card image cap" height="249px">
+            <div class="card-body">
+              <p>
+                Nagpur (Marathi pronunciation: [nagpuɾ]) is the third largest city and the winter capital of the Indian state of Maharashtra.[17] It is the 13th largest city in India by population[18] and according to an Oxford's Economics report, Nagpur is projected to be the fifth fastest growing city in the world from 2019 to 2035 with an average growth of 8.41%.[19] It has been proposed as one of the Smart Cities
+                 in Maharashtra and is one of the top ten cities in India in Smart City Project execution.
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4" >
+        <div class="card" height="650px">
+          <div class="card-header">
+            <h3>Mumbai</h3>
+          </div>
+          <img class="card-img-top" src="Gateway_of_India.jpg" alt="Card image cap" height="249px">
+          <div class="card-body">
+            <p>
+              Mumbai (English: /mʊmbai/ (audio speaker iconlisten), Marathi: [mumbəi ]; also known as Bombay /bɒmˈbeɪ/— the official name until 1995) is the capital city of the Indian state of Maharashtra. According to the United Nations, as of 2018, Mumbai is the second-most populous city in India after Delhi and the eighth-most populous city in the world with a population of roughly 2 crore (20 million).[18] As per the Indian government population census of 2011, Mumbai was the most populous city in India with an estimated city proper population of 1.25 crore
+               (12.5 million).    
+            </p>
+          </div>
+        </div>
+    </div>
+      </div>
+    </section>
+    <hr>
+    <section class="bankApp mb-5" id="bankApp">
+      <div class="heading d-flex justify-content-center mt-5">
+        <h2 class="text-light"><b><u>Banking App</u></b></h2>
+      </div>
+      <div class="inqury d-flex justify-content-center mt-5">
+        
+        <div class="card p-2  justify-content-center text-center">
+            <div class="card-body">
+                <div>
+                    <h5 class="card-title p-3"><u><b>Welcome to Banking Enquiry</b></u></h5>
+                    <h6 class="card-subtitle mb-4 text-muted p-4" id="">Your Account Balance is <u><b><span id="accBalance">0 Rs.</span></b></u> </h6>
+                    <input type="number" placeholder="enter the amount" id="input"  class="form-control mb-3">
+                   <div class="row">
+                       <div class="col-sm-4">
+                        <button class="btn btn-primary p-1 mr-5" onclick="createAcc()">Create account</button>
+                       </div>
+                       <div class="col-sm-4">
+                        <button class="btn btn-warning p-1 " onclick="withdraw()">Withdraw</button>
+                        </div>
+                        <div class="col-sm-4">   
+                            <button class="btn btn-success p-1 ml-5" onclick="deposite()">Deposite</button>
+                        </div>
+                   </div>  
+                </div>
+            </div>
+            <div class="card footer p-3">
+                <p class="card-subtitle mb-1 text-muted">If don't have account click on create account minimum 5000/- to create account</p>
+            </div>
+          </div>
+    </div>
+    
+    
+    </section>
+  </div>
+
+
+
+ 
+ 
+  <script>
+
+    //form validations
+
+         function validate(){
+            var name = document.getElementById("name").value;
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var address = document.getElementById("address").value;
+            var num = document.getElementById("num").value;
+
+            var nameParttern = /^[a-zA-Z\-]+$/;
+            var userNamePattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+$/;
+            var emailPattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]){2,4}+$/;
+            var passParttern = /^[A-Za-z]\w{7,14}$/;
+            var numParttern = /^[0-9]{1,10}$/;
+
+            if(name == '' ){
+                alert("Email cannot be empty");
+            }else if(!namePattern.text(name)){
+                alert("Please Provide a Valid name")
+            }else{
+                alert("Form has been sent successfully")
+            }
+            if(username== '' ){
+                alert("Email cannot be empty");
+            }else if(!userNamePattern.text(username)){
+                alert("Please Provide a Valid userName")
+            }else{
+                alert("Form has been sent successfully")
+            }
+            if(email == '' ){
+                alert("Email cannot be empty");
+            }else if(!eamilPattern.text(email)){
+                alert("Please Provide a Valid email")
+            }else{
+                alert("Form has been sent successfully")
+            }
+            if(pass == '' ){
+                alert("Email cannot be empty");
+            }else if(!passPattern.text(pass)){
+                alert("Please Provide a Valid pass")
+            }else{
+                alert("Form has been sent successfully")
+            }
+            if(num == '' ){
+                alert("Email cannot be empty");
+            }else if(!numPattern.text(num)){
+                alert("Please Provide a Valid num")
+            }else{
+                alert("Form has been sent successfully")
+            }
+        }
+
+    //banking logics
+
+
+    function createAcc(){
+        let createAmo = document.getElementById("input").value;
+        
+        if(createAmo == ''){
+            alert("Your amount is empty else enter correct input");
+        }
+        else if(createAmo<5000){
+            alert('Amount should be greater than 5000');
+        }
+        else{
+           document.getElementById('accBalance').innerText=createAmo;
+           document.getElementById("input").value="";
+           //alert('your account has created   ');
+        }
+    }
+
+    function withdraw(){
+        let totalAccBalance=document.getElementById('accBalance').innerText;
+        let getWithdrawAmt=document.getElementById('input').value;
+        let balanceAmt = totalAccBalance-getWithdrawAmt;
+        if(getWithdrawAmt == ''){
+            alert("Your amount is empty ");
+        }
+        else if(getWithdrawAmt > totalAccBalance){
+            alert('Your amount is empty else enter correct input');
+        }
+        else{
+            document.getElementById('accBalance').innerText=balanceAmt;
+            document.getElementById("input").value="";
+            //alert("you have withdraw your amount");
+        }
+    }
+
+    function deposite(){
+         let totalAccBalance = document.getElementById("accBalance").innerText;
+         let deptAmo = document.getElementById("input").value;
+         let balanceAmt = parseInt(totalAccBalance) + parseInt(deptAmo);
+           if(deptAmo == ''){
+            alert("Your amount is empty else enter correct input ");
+        } else{
+            document.getElementById('accBalance').innerText=balanceAmt;
+            document.getElementById("input").value="";
+            //alert("you have withdraw your amount");
+        }
+    }
+
+
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</body>
+</html>
