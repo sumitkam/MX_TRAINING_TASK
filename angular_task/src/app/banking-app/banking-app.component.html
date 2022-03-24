@@ -1,0 +1,41 @@
+<section class="bankApp mb-5" id="bankApp">
+  <div class="heading d-flex justify-content-center mt-5">
+    <!-- <h2 class="text-light"><b><u>Banking App</u></b></h2> -->
+  </div>
+  <div class="inqury d-flex justify-content-center mt-5">
+
+    <div class="card p-2  justify-content-center text-center">
+        <div class="card-body">
+            <form>
+                <h5 class="card-title p-3"><u><b>Banking App</b></u></h5>
+                <h6 class="card-subtitle mb-4 text-muted p-4" id="">Your Account Balance is <u><b><span id="accBalance">0 Rs.{{balance}}</span></b></u> </h6>
+                <input type="text" placeholder="enter the amount"  name="amount"   id="input"  class="form-control mb-3" required>
+                <div *ngIf="amount.invalid && (amount.untouched || amount.dirty )">
+                  <div *ngIf="amount.errors?.['required']">
+                    <p class="text-danger">* amount field is required</p>
+                  </div>
+                  <div *ngIf="amount.errors?.['pattern']">
+                    <p class="text-danger">* amount can have numbers only</p>
+                  </div>
+                </div>
+               <div class="row">
+                   <div class="col-sm-4">
+                    <button class="btn btn-primary p-1 mr-5" (click)="createAcc(amount.value)">Create account</button>
+                   </div>
+                   <div class="col-sm-4">
+                    <button class="btn btn-warning p-1 " onclick="withdraw()">Withdraw</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-success p-1 ml-5" onclick="deposite()">Deposite</button>
+                    </div>
+               </div>
+              </form>
+        </div>
+        <div class="card footer p-3">
+            <p class="card-subtitle mb-1 text-muted">If don't have account click on create account minimum 5000/- to create account</p>
+        </div>
+      </div>
+</div>
+
+
+</section>

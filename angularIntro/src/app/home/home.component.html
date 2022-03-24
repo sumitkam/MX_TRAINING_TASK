@@ -1,0 +1,46 @@
+<p>home works!</p>
+
+<h1>Template Driven Forms</h1>
+<form action="" name="form" #frm="ngForm" (ngSubmit)="frm.valid && afterSubmit()">
+  <label for="">username</label>
+  <input type="text" name="name"  [(ngModel)]="user.name" #name="ngModel" minlength="5" pattern="^[a-zA-Z_]+$" required>
+  <div *ngIf="name.invalid && (name.untouched || name.dirty )">
+    <div *ngIf="name.errors?.['required']">
+      <strong>Name field is required</strong>
+    </div>
+    <div *ngIf="name.errors?.['minlength']">
+      <strong>Name should have atleast 5 character</strong>
+    </div>
+    <div *ngIf="name.errors?.['pattern']">
+      <strong>Name can have alphabeta only</strong>
+    </div>
+  </div>
+  <label for="">City Name</label>
+  <input type="text" name="city"  [(ngModel)]="user.city" #city="ngModel" minlength="5" pattern="^[a-zA-Z_]+$" required>
+  <div *ngIf="city.invalid && (city.untouched || city.dirty )">
+    <div *ngIf="city.errors?.['required']">
+      <strong>city field is required</strong>
+    </div>
+    <div *ngIf="city.errors?.['minlength']">
+      <strong>city should have atleast 5 character</strong>
+    </div>
+    <div *ngIf="city.errors?.['pattern']">
+      <strong>city can have alphabeta only</strong>
+    </div>
+  </div>
+  <label for="">mobile number</label>
+  <input type="text" name="phone"  [(ngModel)]="user.phone" #phone="ngModel" maxlength="10" pattern="^[0-9]+$" required>
+  <div *ngIf="phone.invalid && (phone.untouched || phone.dirty )">
+    <div *ngIf="phone.errors?.['required']">
+      <strong>mobile no. field is required</strong>
+    </div>
+    <div *ngIf="phone.errors?.['minlength']">
+      <strong>mobile no. should have max 10 numbers</strong>
+    </div>
+    <div *ngIf="phone.errors?.['pattern']">
+      <strong>mobile no. can have numbers only</strong>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="frm.invalid">Submit</button>
+</form>

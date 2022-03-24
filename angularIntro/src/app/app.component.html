@@ -1,0 +1,137 @@
+<!-- <h1>Welcome to Angular Introduction </h1> -->
+
+
+
+
+
+<app-header></app-header>
+
+
+
+<!-- <div *appStrDir="2000">
+  <p>This text will render after 2 seconds</p>
+</div> -->
+
+<!-- <table>
+  <tr>
+    <th>Name</th>
+    <th>city</th>
+    <th>type</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.name}}</td>
+    <td>{{user.city}}</td>
+    <td>{{user.name | nameTitle}}</td>
+  </tr>
+</table>
+
+<h1>detail list</h1>
+<ul>
+  <li  *ngFor="let d of data">{{d}}</li>
+</ul>
+
+<h1>check password</h1>
+<input type="text" placeholder="enter password" appDemo1>
+
+<h2>Binding</h2>
+<h3>on way binding</h3>
+<h2>{{10 + 20}}</h2>
+<h2>Addition of {{a}} and {{b}} is {{c}}</h2>
+
+<h3>Two way binding</h3> -->
+<!--
+<label for="">Enter the amount and see for  which card you are eligiable</label>
+<input type="text"  [(ngModel)]="salary" placeholder="input amount">
+<h3>{{salary}}</h3> -->
+
+
+<!-- <div *ngIf="salary < 2000" >
+  <h2>You are not eligiable for any card </h2>
+</div> -->
+<!-- <div *ngIf="salary >= 2000 && salary < 10000">
+    <h4>You get the silver card</h4>
+</div>
+<div *ngIf="salary >= 10000 && salary < 20000">
+  <h4>You get the Gold card</h4>
+</div>
+
+<div *ngIf="salary >= 20000 ">
+  <h4>You get the Platinum card</h4>
+</div>
+
+<h1>Event Binging</h1>
+
+<input type="text" value="" [(ngModel)]="a" placeholder="enter value" >
+<input type="text" value="" [(ngModel)]="b" placeholder="enter value" >
+<button (click)="sum()">Add</button><br><br>
+<input type="text" value="" [(ngModel)]="c" placeholder="enter value" >
+
+<h2>check eligibility</h2>
+<input type="text"  [(ngModel)]="salary" placeholder="input amount">
+<button (click)="check()">Add</button><br><br>
+<h4>{{silver}}</h4>
+<h4>{{gold}}</h4>
+<h4>{{platinum}}</h4>
+
+<h3>array loop</h3>
+<ul>
+  <li *ngFor="let s of arry">{{s}}</li>
+</ul>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Dept</th>
+    <th>Sal</th>
+  </tr>
+  <tr *ngFor="let e of emp ">
+
+    <td>{{e.name }}</td>
+    <td>{{e.dept}}</td>
+    <td>{{e.sal}}</td>
+
+
+  </tr>
+</table>
+
+<h3>EMI calculator</h3>
+<label for="">Amount</label>
+<input type="text" [(ngModel)]="p">
+<label for="">interest rate</label>
+<input type="text" [(ngModel)]="r">
+<label for="">Time</label>
+<input type="text" [(ngModel)]="n">
+<button (click)="calculate()">Calculate</button>
+
+<h2>Your EMI is {{emi}}</h2>
+
+
+<h1>event binding</h1>
+
+<input type="text" (keyup)="changeval($event)"/>
+<p>{{num}}</p><span>{{silver}}</span>
+<span>{{gold}}</span>
+<span>{{platinum}}</span>
+<span>{{notElg}}</span>
+ -->
+
+
+<!-- <app-home [name]="username"></app-home>
+
+<h3>fruits</h3>
+<ul>
+  <li *ngFor="let ff of fruits">
+    {{ff}}
+  </li>
+</ul> -->
+
+<!-- <input type="text" [(ngModel)]="fruit" placeholder="enter fruit name">
+<button (click)="addfruit()">add</button> -->
+
+
+<!-- <app-contact (addNewFruit)="addfruit($event)"></app-contact> -->
+
+
+
+<router-outlet></router-outlet>
+

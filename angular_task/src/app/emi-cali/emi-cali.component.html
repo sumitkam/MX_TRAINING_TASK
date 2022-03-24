@@ -1,0 +1,52 @@
+
+<section>
+  <div class="emi d-flex justify-content-center mt-5 ">
+      <div class="card w-75">
+          <div class="card-header">
+              <h2>EMI Calculator</h2>
+          </div>
+          <div class="card-body">
+
+                  <div class="form-group">
+                      <label for="amount">Amount</label>
+                      <input type="text" class="form-control" id="amount" >
+                  </div>
+                  <div class="form-group">
+                      <label for="amount">Intrest Rate</label>
+                      <input type="text" class="form-control" id="interest" >
+                  </div>
+                  <div class="form-group">
+                      <label for="amount">Tenure(in months)</label>
+                      <input type="text" class="form-control" id="year" >
+                  </div>
+                  <div class="form-group">
+                     <button class="btn btn-primary"  onclick="overAllEmi()">Calculate</button>
+                  </div>
+          </div>
+          <div class="card-footer d-flex justify-content-center"  >
+             <table class="table text-center" id="table" style="display: none;">
+                 <thead>
+                     <tr>
+                         <th>Principal Amount</th>
+                         <th>Monthly</th>
+                         <th>Monthly Interest</th>
+                         <th>Yearly</th>
+                         <th>EMI</th>
+                         <th>Total Interest</th>
+                         <th>Total Payment</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <td id="principal"></td>
+                     <td id="monthly"></td>
+                     <td id="monthlyInt"></td>
+                     <td id="yearly"></td>
+                     <td id="emi"></td>
+                     <td id="totalInterest"></td>
+                     <td id="totalPayment"></td>
+                 </tbody>
+             </table>
+          </div>
+      </div>
+  </div>
+</section>
