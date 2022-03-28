@@ -9,6 +9,13 @@ import { HeaderComponent } from './header/header.component';
 import { BankingAppComponent } from './banking-app/banking-app.component';
 import { EligibilityCardComponent } from './eligibility-card/eligibility-card.component';
 import { EmiCaliComponent } from './emi-cali/emi-cali.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { FilterEmpPipe } from './pipes/filter-emp.pipe';
 
 @NgModule({
   declarations: [
@@ -17,12 +24,19 @@ import { EmiCaliComponent } from './emi-cali/emi-cali.component';
     HeaderComponent,
     BankingAppComponent,
     EligibilityCardComponent,
-    EmiCaliComponent
+    EmiCaliComponent,
+    LoginComponent,
+    ReactiveFormComponent,
+    HomeComponent,
+    CalculatorComponent,
+    FilterEmpPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,15 +9,52 @@
 
                   <div class="form-group">
                       <label for="amount">Enter Amount</label>
-                      <input type="text" class="form-control" id="amount" >
+                      <input type="text" class="form-control" id="amount" ng [(ngModel)]="amount">
                   </div>
                   <div class="form-group">
-                    <button class="btn btn-success">Check</button>
+                    <button class="btn btn-info" (click)="check()">Check</button>
                   </div>
 
           </div>
 
 
       </div>
+
+      <div class="card w-25 bg-light" *ngIf="silver">
+        <div class="card-header text-center text-light">
+          <h2>Sliver card </h2>
+        </div>
+        <div class="card-body text-center text-light">
+          <h4> ! Congratulations !</h4>
+          <p>You are eligiable for the Silver card !</p>
+        </div>
+    </div>
+    <div class="card w-25 bg-warning" *ngIf="gold">
+      <div class="card-header text-center text-light">
+        <h2>Gold card </h2>
+      </div>
+      <div class="card-body text-center text-light">
+        <h4> ! Congratulations !</h4>
+        <p>You are eligiable for the Gold card !</p>
+      </div>
+  </div>
+  <div class="card w-25 bg-success" *ngIf="platinum">
+    <div class="card-header text-center text-light">
+      <h2>Platinum card </h2>
+    </div>
+    <div class="card-body text-center text-light">
+      <h4 > ! Congratulations !</h4>
+      <p>You are eligiable for the Platinum card !</p>
+    </div>
+</div>
+<div class="card w-25 bg-dark" *ngIf="notEg">
+  <div class="card-header text-center text-light">
+    <h2>NO card </h2>
+  </div>
+  <div class="card-body text-center text-light">
+    <h4> ! Soory !</h4>
+    <p>You are eligiable for any card !</p>
+  </div>
+</div>
   </div>
 </section>

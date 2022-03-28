@@ -9,22 +9,22 @@
 
                   <div class="form-group">
                       <label for="amount">Amount</label>
-                      <input type="text" class="form-control" id="amount" >
+                      <input type="text" class="form-control" id="amount" [(ngModel)]="amount">
                   </div>
                   <div class="form-group">
                       <label for="amount">Intrest Rate</label>
-                      <input type="text" class="form-control" id="interest" >
+                      <input type="text" class="form-control" id="interest" [(ngModel)]="interest">
                   </div>
                   <div class="form-group">
                       <label for="amount">Tenure(in months)</label>
-                      <input type="text" class="form-control" id="year" >
+                      <input type="text" class="form-control" id="year" [(ngModel)]="year" >
                   </div>
                   <div class="form-group">
-                     <button class="btn btn-primary"  onclick="overAllEmi()">Calculate</button>
+                     <button class="btn btn-info"  (click)="overAllEmi()">Calculate</button>
                   </div>
           </div>
           <div class="card-footer d-flex justify-content-center"  >
-             <table class="table text-center" id="table" style="display: none;">
+             <table class="table text-center" id="table" *ngIf="tableShow" >
                  <thead>
                      <tr>
                          <th>Principal Amount</th>
@@ -37,13 +37,13 @@
                      </tr>
                  </thead>
                  <tbody>
-                     <td id="principal"></td>
-                     <td id="monthly"></td>
-                     <td id="monthlyInt"></td>
-                     <td id="yearly"></td>
-                     <td id="emi"></td>
-                     <td id="totalInterest"></td>
-                     <td id="totalPayment"></td>
+                     <td id="principal">{{amount}}</td>
+                     <td id="monthly">{{monthly}}</td>
+                     <td id="monthlyInt">{{monthlyI}}</td>
+                     <td id="yearly">{{yearly}}</td>
+                     <td id="emi">{{emi}}</td>
+                     <td id="totalInterest">{{totalI}}</td>
+                     <td id="totalPayment">{{totalP}}</td>
                  </tbody>
              </table>
           </div>

@@ -1,0 +1,66 @@
+<app-header></app-header>
+<section>
+  <div class="emi d-flex justify-content-center mt-5 ">
+    <div class="search"></div>
+      <div class="card w-25 ">
+          <div class="card-header">
+              <h2>SEARCH</h2>
+          </div>
+          <div class="card-body">
+
+                  <div class="form-group">
+                      <label for="amount">Salary</label>
+                      <input type="text" class="form-control" id="amount" >
+                  </div>
+                  <div class="form-group">
+                    <label for="amount">Department</label>
+                    <input type="text" class="form-control" id="amount" >
+                </div>
+                <div class="form-group">
+                  <label for="amount">City</label>
+                  <input type="text" class="form-control" id="amount" >
+              </div>
+                  <div class="form-group">
+                    <button class="btn btn-success">Check</button>
+                  </div>
+
+                </div>
+      </div>
+      <div class="card w-75 ">
+        <div class="card-header">
+            <h2>EMPOLYEE LIST </h2>
+        </div>
+        <div class="card-body">
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">City</th>
+                <th scope="col">Department</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Manager</th>
+                <th scope="col">Experence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let emp of employee">
+
+                <td>{{emp.name}}</td>
+                <td>{{emp.city}}</td>
+                <td>{{emp.dept}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.manager}}</td>
+                <td>{{emp.exp}}</td>
+
+
+              </tr>
+
+            </tbody>
+          </table>
+          </div>
+
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,27 @@
+
+
+[
+  {"company":"Lenovo","name":"laptop","model_no":"001101","price":60000,"quantity":"3"},
+  {"company":"Asus","name":"laptop","model_no":"002201","price":78900,"quantity":"4"},
+  {"company":"Dell","name":"laptop","model_no":"003301","price":49200,"quantity":"9"},
+  {"company":"Htc","name":"mobile","model_no":"008801","price":49200,"quantity":"7"},
+  {"company":"Honor","name":"mobile","model_no":"009901","price":28229,"quantity":"6"},
+  {"company":"Realme","name":"moble","model_no":"001001","price":40092,"quantity":"4"},
+  {"company":"Hp","name":"laptop","model_no":"004401","price":28900,"quantity":"2"},
+  {"company":"Zen","name":"mobile","model_no":"005501","price":99200,"quantity":"1"},
+  {"company":"Vivo","name":"mobile","model_no":"006601","price":20000,"quantity":"9"},
+  {"company":"Opp","name":"mobile","model_no":"007701","price":78900,"quantity":"5"},
+  {"company":"Lenovo","name":"laptop","model_no":"001101","price":60000,"quantity":"3"},
+  {"company":"Asus","name":"laptop","model_no":"002201","price":78900,"quantity":"6"},
+  {"company":"Dell","name":"laptop","model_no":"003301","price":49200,"quantity":"5"},
+  {"company":"Htc","name":"mobile","model_no":"008801","price":49200,"quantity":"5"},
+  {"company":"Nokia","name":"mobile","model_no":"001201","price":20020,"quantity":"4"},
+  {"company":"Samsang","name":"Tv","model_no":"001301","price":7891,"quantity":"6"},
+  {"company":"Apple","name":"Tv","model_no":"001401","price":49220,"quantity":"9"},
+  {"company":"Lenovo","name":"laptop","model_no":"001501","price":28900,"quantity":"9"},
+  {"company":"Asus","name":"laptop","model_no":"001601","price":30092,"quantity":"4"},
+  {"company":"Zen","name":"mobile","model_no":"005501","price":99200,"quantity":"22"},
+  {"company":"Vivo","name":"mobile","model_no":"006601","price":20000,"quantity":"8"},
+  {"company":"Opp","name":"mobile","model_no":"007701","price":78900,"quantity":"10"}
+
+]

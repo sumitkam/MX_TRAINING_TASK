@@ -16,6 +16,12 @@ import { MissionComponent } from './about/mission/mission.component';
 import { FeacturesComponent } from './feactures/feactures.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HeaderComponent } from './header/header.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +37,17 @@ import { HeaderComponent } from './header/header.component';
     MissionComponent,
     FeacturesComponent,
     GalleryComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReactiveFormComponent,
+    LoginComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

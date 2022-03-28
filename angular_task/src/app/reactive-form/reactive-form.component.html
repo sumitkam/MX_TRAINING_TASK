@@ -1,0 +1,77 @@
+
+
+<section class="regForm w-100 d-flex justify-content-center" id="regForm">
+  <div class="card mt-5">
+    <div class="card-body">
+      <form action="" name="form" #form="ngForm" [formGroup]="formValue" (ngSubmit)="form.valid && afterSubmit()">
+          <h2 class="d-flex justify-content-center"><b><u>Template driven form Validation</u></b></h2>
+          <div class="form-row mt-5 text-align-left">
+            <div class="form-group col-md-6">
+              <label for="">Name</label><br>
+              <input type="text" placeholder="enter name" formControlName="name" class="form-control">
+                  <div *ngIf="f['name'].invalid && (f['name'].touched || f['name'].dirty)">
+                      <div *ngIf="f['name'].errors && f['name'].errors['required']">
+                        <p class="text-danger">* Name is required</p>
+                      </div>
+
+                      <div *ngIf="f['name'].errors && f['name'].errors['pattern']">
+                        <p class="text-danger">* Name can have only alphabet character</p>
+                      </div>
+                  </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="">city</label><br>
+              <input type="text" placeholder="enter city" formControlName="city" class="form-control">
+              <div *ngIf="f['city'].invalid && (f['city'].touched || f['city'].dirty)">
+                  <div *ngIf="f['city'].errors && f['city'].errors['required']">
+                    <p class="text-danger"> * city is required</p>
+                  </div>
+                  <div *ngIf="f['city'].errors && f['city'].errors['minlength']">
+                    <p class="text-danger"> * city can maximun  4 characters</p>
+                  </div>
+                  <div *ngIf="f['city'].errors && f['city'].errors['pattern']">
+                    <p class="text-danger"> * city can have only alphabet character</p>
+                  </div>
+              </div>
+           </div>
+
+            <div class="form-group col-md-6">
+              <label for="">email</label><br>
+              <input type="text" placeholder="example@gmail.com" formControlName="email" class="form-control">
+              <div *ngIf="f['email'].invalid && (f['email'].touched || f['email'].dirty)">
+                  <div *ngIf="f['email'].errors && f['email'].errors['required']">
+                    <p class="text-danger"> * email is required</p>
+                  </div>
+                  <div *ngIf="f['email'].errors && f['email'].errors['pattern']">
+                    <p class="text-danger"> * email can have special character,numbers,upercases</p>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="">Mobile no.</label><br>
+              <input type="text" placeholder="enter phone" formControlName="phone" class="form-control">
+              <div *ngIf="f['phone'].invalid && (f['phone'].touched || f['phone'].dirty)">
+                  <div *ngIf="f['phone'].errors && f['phone'].errors['required']">
+                    <p class="text-danger"> * mobile no. is required</p>
+                  </div>
+                  <div *ngIf="f['phone'].errors && f['phone'].errors['maxlength']">
+                    <p class="text-danger"> * mobile no. can max 10 characters</p>
+                  </div>
+                  <div *ngIf="f['phone'].errors && f['phone'].errors['pattern']">
+                    <p class="text-danger"> * mobile no. can have only numbers</p>
+                  </div>
+              </div>
+            </div>
+            </div>
+
+
+          <div class="form-group d-flex justify-content-center mt-3">
+            <button type="submit" [disabled]="form.invalid" class="btn btn-primary ">Submit</button>
+          </div>
+
+        </form>
+    </div>
+  </div>
+
+</section>
+

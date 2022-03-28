@@ -1,0 +1,40 @@
+<h1>JSON data</h1>
+
+<form action="" [formGroup]="fromValue">
+  <div class="from-group">
+    <label for="">Name</label>
+    <input type="text" placeholder="enter name" formControlName="name">
+  </div>
+  <div class="from-group">
+    <label for="">City</label>
+    <input type="text" placeholder="enter name" formControlName="city">
+  </div>
+  <div class="from-group">
+    <label for="">Email</label>
+    <input type="text" placeholder="enter name" formControlName="email">
+  </div>
+  <div class="from-group">
+    <label for="">Mobile no.</label>
+    <input type="text" placeholder="enter name" formControlName="mobile">
+  </div>
+  <div class="from-group">
+   <button type="button" (click)="submitUser()">submit</button>
+  </div>
+</form>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Email</th>
+    <th>Mobile no.</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.name}}</td>
+    <td>{{user.city}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.mobile}}</td>
+  </tr>
+</table>

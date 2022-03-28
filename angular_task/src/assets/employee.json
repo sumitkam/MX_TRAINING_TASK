@@ -1,0 +1,17 @@
+[
+  {"name":"sumit","city":"chandrapur","dept":"IT","salary":50000,"manager":"jono","exp":"3 years"},
+  {"name":"ankit","city":"nagpur","dept":"Frontend","salary":60000,"manager":"jono","exp":"4 years"},
+  {"name":"yami","city":"pune","dept":"Backend","salary":30000,"manager":"jeye","exp":"2 years"},
+  {"name":"rahul","city":"rajura","dept":"FullStack","salary":40000,"manager":"sonu","exp":"5 years"},
+  {"name":"shital","city":"balarsha","dept":"Non-IT","salary":50000,"manager":"depak","exp":"3 years"},
+  {"name":"vishal","city":"chandrapur","dept":"IT","salary":50000,"manager":"jono","exp":"3 years"},
+  {"name":"krish","city":"nagpur","dept":"Frontend","salary":60000,"manager":"jono","exp":"4 years"},
+  {"name":"Om","city":"pune","dept":"Backend","salary":30000,"manager":"jeye","exp":"2 years"},
+  {"name":"avinash","city":"rajura","dept":"FullStack","salary":40000,"manager":"sonu","exp":"5 years"},
+  {"name":"frank","city":"balarsha","dept":"Non-IT","salary":50000,"manager":"depak","exp":"3 years"},
+  {"name":"kartik","city":"chandrapur","dept":"IT","salary":50000,"manager":"jono","exp":"3 years"},
+  {"name":"shiri","city":"nagpur","dept":"Frontend","salary":60000,"manager":"jono","exp":"4 years"},
+  {"name":"trupti","city":"pune","dept":"Backend","salary":30000,"manager":"jeye","exp":"2 years"},
+  {"name":"mariya","city":"rajura","dept":"FullStack","salary":40000,"manager":"sonu","exp":"5 years"},
+  {"name":"shradha","city":"balarsha","dept":"Non-IT","salary":50000,"manager":"depak","exp":"3 years"}
+]

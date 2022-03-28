@@ -8,25 +8,25 @@
         <div class="card-body">
             <form>
                 <h5 class="card-title p-3"><u><b>Banking App</b></u></h5>
-                <h6 class="card-subtitle mb-4 text-muted p-4" id="">Your Account Balance is <u><b><span id="accBalance">0 Rs.{{balance}}</span></b></u> </h6>
-                <input type="text" placeholder="enter the amount"  name="amount"   id="input"  class="form-control mb-3" required>
-                <div *ngIf="amount.invalid && (amount.untouched || amount.dirty )">
+                <h6 class="card-subtitle mb-4 text-muted p-4" id="">Your Account Balance is <u><b><span id="accBalance">Rs.{{balance}}</span></b></u> </h6>
+                <input type="text" placeholder="enter the amount"  name="amount"   id="input"  class="form-control mb-3" [(ngModel)]="amount">
+                <!-- <div *ngIf="amount.invalid && (amount.untouched || amount.dirty )">
                   <div *ngIf="amount.errors?.['required']">
                     <p class="text-danger">* amount field is required</p>
                   </div>
                   <div *ngIf="amount.errors?.['pattern']">
                     <p class="text-danger">* amount can have numbers only</p>
                   </div>
-                </div>
+                </div> -->
                <div class="row">
                    <div class="col-sm-4">
-                    <button class="btn btn-primary p-1 mr-5" (click)="createAcc(amount.value)">Create account</button>
+                    <button class="btn btn-primary p-1 mr-5" (click)="create()">Create account</button>
                    </div>
                    <div class="col-sm-4">
-                    <button class="btn btn-warning p-1 " onclick="withdraw()">Withdraw</button>
+                    <button class="btn btn-warning p-1 " (click)="withdraw()">Withdraw</button>
                     </div>
                     <div class="col-sm-4">
-                        <button class="btn btn-success p-1 ml-5" onclick="deposite()">Deposite</button>
+                        <button class="btn btn-success p-1 ml-5" (click)="deposite()">Deposite</button>
                     </div>
                </div>
               </form>
