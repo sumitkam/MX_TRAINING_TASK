@@ -51,6 +51,7 @@ export class ProductComponent implements OnInit {
     this.showSave = true;
     this.showUpdate= false;
   }
+
   postSingleProduct(){
     this.prod.postProduct(this.formValue.value).subscribe(()=>{
       console.warn(this.formValue.value);
