@@ -15,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
-import { FilterEmpPipe } from './pipes/filter-emp.pipe';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { FilterEmpPipe } from './pipes/filter-emp.pipe';
     ReactiveFormComponent,
     HomeComponent,
     CalculatorComponent,
-    FilterEmpPipe
+
   ],
   imports: [
     BrowserModule,

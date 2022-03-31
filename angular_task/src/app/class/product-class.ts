@@ -1,11 +1,11 @@
 export class ProductClass {
 
-  constructor(
-    company:string,
-    name:string,
-    model_no:number,
-    price:number,
-    quantity:number
-  ){}
+    _id:number = 0;
+    name:string='';
+    brand:string='';
+    model:string='';
+    price:number=0;
+    quantity:number=0;
+
 
 }

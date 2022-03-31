@@ -6,6 +6,8 @@ import { SecondComponent } from './second.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { HeaderComponent } from './header/header.component';
     SecondComponent,
     EmployeeComponent,
     ProductComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,
-    SecondRoutingModule
+    SecondRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class SecondModule { }

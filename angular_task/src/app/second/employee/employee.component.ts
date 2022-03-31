@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpServiceService } from 'src/app/service/emp-service.service';
 import { FormBuilder,FormGroup,Validator } from '@angular/forms';
-import { FilterEmpPipe } from "../filter-emp.pipe";
+
 
 @Component({
   selector: 'app-employee',

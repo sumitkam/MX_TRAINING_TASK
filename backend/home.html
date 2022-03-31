@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>welcome to home page</h1>
+    <div>
+        <img src="../img/b10.jpg" alt="">
+        <form action="show_user" method="post">
+            <div>
+                <label for="">Name</label>
+                <input type="text" name="username" placeholder="enter username">
+               
+                <input type="submit" name="submit" value="submit" id="">
+            </div>
+        </form>
+        <form action="upload" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="">Name</label>
+               
+                <input type="file" name="doc" placeholder="choose file....">
+                <input type="submit" name="upload" value="submit" id="">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

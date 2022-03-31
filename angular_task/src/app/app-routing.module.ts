@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
   {path:'form',component:FormComponent},
-  {path:'ractive',component:ReactiveFormComponent},
+  {path:'reactive',component:ReactiveFormComponent},
   {path:'bank',component:BankingAppComponent},
   {path:'calci',component:CalculatorComponent},
   {path:'eligible',component:EligibilityCardComponent},

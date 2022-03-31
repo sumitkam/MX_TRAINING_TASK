@@ -2,7 +2,7 @@
 
 <section>
   <div class="emi d-flex justify-content-center mt-5 ">
-      <div class="card w-25 ">
+      <!-- <div class="card w-25 ">
           <div class="card-header">
               <h2>SEARCH</h2>
           </div>
@@ -19,12 +19,22 @@
                   <div class="form-group">
                     <button class="btn btn-success">Check</button>
                   </div>
+                  <div class="form-group">
+
+
+                  </div>
 
                 </div>
-      </div>
+      </div> -->
       <div class="card w-75 ">
         <div class="card-header">
             <h2>PRODUCT LIST </h2>
+            <div class="float-right">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  (click)="clickOnAdd()">
+                Add Product
+              </button>
+            </div>
+
         </div>
         <div class="card-body">
 
@@ -36,18 +46,29 @@
                 <th scope="col">Model no</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
+                <th scope="col" class="">Edit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete</th>
+
+
 
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let prod of product">
-                  <td>{{prod.company}}</td>
-                  <td>{{prod.name}}</td>
-                  <td>{{prod.model_no}}</td>
-                  <td>{{prod.price}}</td>
-                  <td>{{prod.quantity}}</td>
-              </tr>
+             <tr *ngFor="let item of product; let i= index">
+               <td>{{item.name}}</td>
+               <td>{{item.brand}}</td>
+               <td>{{item.model}}</td>
+               <td>{{item.price}}</td>
+               <td>{{item.quantity}}</td>
+               <!-- <td><a routerLink="./edit/{{item._id}}"><button class="btn btn-info"> edit</button></a></td> -->
+               <td>
+                 <button type="button" class="btn btn-info"
+                  data-toggle="modal" data-target="#exampleModal" (click)="onEditProduct(item)">
+                   Edit
+                   </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                   <button class="btn btn-danger" (click)="deleteProduct(item)">Delete</button>
 
+            </td>
+             </tr>
             </tbody>
           </table>
           </div>
@@ -56,4 +77,53 @@
   </div>
 </section>
 
+<!-- Button trigger modal -->
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue" >
+          <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" placeholder="enter name" class="form-control" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="">Brand</label>
+            <input type="text" placeholder="enter brand" class="form-control" formControlName="brand">
+          </div>
+          <div class="form-group">
+            <label for="">Model</label>
+            <input type="text" placeholder="enter model" class="form-control" formControlName="model">
+          </div>
+          <div class="form-group">
+            <label for="">Price</label>
+            <input type="text" placeholder="enter price" class="form-control" formControlName="price">
+          </div>
+          <div class="form-group">
+            <label for="">Quantity</label>
+            <input type="text" placeholder="enter quantity" class="form-control" formControlName="quantity">
+          </div>
+          <div class="modal-footer">
+            <button type="button"  class="btn btn-secondary" data-dismiss="modal" id="cancle">Close</button>
+            <button type="submit" *ngIf="showSave" class="btn btn-primary" (click)="postSingleProduct()" >Save </button>
+            <button type="submit" *ngIf="showUpdate" class="btn btn-primary" (click)="updateProduct()" >Update </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
